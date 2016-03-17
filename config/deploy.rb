@@ -10,6 +10,8 @@ on :load do
   set :assets_role, [:app]
 end
 
+set :ssh_log_level, :debug
+
 set :initial_ssh_user, 'chef'
 
 # Use a simple directory tree copy here to make demo easier.
@@ -20,8 +22,8 @@ set :deploy_via, :copy
 
 # Easier to do system level config as root - probably should do it through
 # sudo in the future.  We use ssh keys for access, so no passwd needed
-set :user, 'chef'
-set :password, 'CardIgEcEp5'
+set :user, 'root'
+set :password, nil
 
 # Use sudo with user rails for cap deploy:[stop|start|restart]
 # This way exposed services (mongrel) aren't running as a privileged user

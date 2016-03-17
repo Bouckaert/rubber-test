@@ -1,6 +1,6 @@
 ---
 - !ruby/object:Rubber::Configuration::InstanceItem
-  name: web
+  name: staging
   domain: chef-client.cin.ufpe.br
   roles:
   - !ruby/object:Rubber::Configuration::RoleItem
@@ -28,7 +28,7 @@
   - !ruby/object:Rubber::Configuration::RoleItem
     name: monit
     options: {}
-  instance_id: web
+  instance_id: staging
   image_type: 
   image_id: 
   security_groups:
@@ -37,9 +37,9 @@
   network: 
   gateway: 
   external_host: 
-  external_ip: 172.21.6.102
+  external_ip: chef-client.cin.ufpe.br
   internal_host: 
-  internal_ip: rubblog
+  internal_ip: chef-client.cin.ufpe.br
   provider: generic
   platform: linux
   root_device_type: 
